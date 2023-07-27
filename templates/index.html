@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Push Notifications App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Patient Feedback</h1>
+        <form method="post">
+            <textarea name="feedback" placeholder="Enter your doctor's feedback here..." required></textarea>
+            <button type="submit">Submit Feedback</button>
+        </form>
+        <div class="task-list">
+            <h2>Recent Feedback:</h2>
+            <ul>
+                {% for task in tasks %}
+                <li>{{ task }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.task-list {
+    padding: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Animations */
+
+.success-message, .error-message {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.success-message.show, .error-message.show {
+    opacity: 1;
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOutUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+.success-message {
+    background-color: #5cb85c;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    animation: slideInDown 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.error-message {
+    background-color: #d9534f;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    animation: slideInDown 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.slide-out {
+    animation: slideOutUp 0.5s;
+    animation-fill-mode: forwards;
+}
